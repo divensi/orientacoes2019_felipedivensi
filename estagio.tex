@@ -1,0 +1,196 @@
+\makeatletter
+\def\input@path{{texmf/tex/latex/abntex/}}
+\makeatother
+\documentclass[oneside]{normas-utf-tex} %oneside = para dissertacoes com numero de paginas menor que 100 (apenas frente da folha) 
+
+% force A4 paper format
+%\special{papersize=210mm,297mm}
+
+\usepackage[brazil]{babel} % pacote portugues brasileiro
+\usepackage[utf8]{inputenc} % pacote para acentuacao direta
+\usepackage{amsmath,amsfonts,amssymb} % pacote matematico
+\usepackage{graphicx} % pacote grafico
+%\usepackage{times} % fonte times
+\usepackage[final]{pdfpages} % adicao da ata
+\usepackage{hyperref} % gera hiperlinks para o sumario, links, referencias -- deve vir antes do 'abntcite'
+\usepackage{url}
+\usepackage{tabularx}
+\usepackage{soulutf8}
+\usepackage{pgfgantt}
+\usepackage{rotating}
+\usepackage[alf,abnt-emphasize=bf,bibjustif,recuo=0cm, abnt-etal-cite=2, abnt-etal-list=99]{abntcite} %configuracao correta das referencias bibliograficas.
+\usepackage{subfigure}
+\usepackage{xtab}
+%\usepackage{nomencl}
+\usepackage[portuguese,algoruled,longend,linesnumbered]{algorithm2e} %Para linhas numeradas e réguas de identação
+\usepackage{algorithm2e}
+\usepackage{listings}
+
+% Parada de desenho
+\usepackage{tikz}
+% Viadagem de seta
+\usetikzlibrary{arrows.meta,positioning}
+
+% Definindo novas cores
+\definecolor{verde}{rgb}{0.25,0.5,0.35}
+\definecolor{jpurple}{rgb}{0.5,0,0.35}
+% Configurando layout para mostrar codigos Java
+%\lstset{
+%  language=Java,
+%  basicstyle=\ttfamily\small,
+%  keywordstyle=\color{jpurple}\bfseries,
+%  stringstyle=\color{red},
+%  commentstyle=\color{verde},
+%  morecomment=[s][\color{blue}]{/**}{*/},
+%  extendedchars=true,
+%  showspaces=false,
+%  showstringspaces=false,
+%  numbers=left,
+%  numberstyle=\tiny,
+%  breaklines=true,
+%  backgroundcolor=\color{cyan!10},
+%  breakautoindent=true,
+%  captionpos=b,
+%  xleftmargin=0pt,
+%  tabsize=4
+%}
+\renewcommand{\lstlistingname}{Código}
+\renewcommand\lstlistlistingname{Lista de Códigos}
+
+
+% ---------- Preambulo ----------
+\instituicao{Universidade Tecnol\'ogica Federal do Paran\'a} % nome da instituicao (ABNTinstituicaodata)
+\departamento{Departamento Acad\^{e}mico de Computa\c{c}\~ao} % nome do programa (UTFPRdepartamentodata)
+\programa{Curso de Ci\^{e}ncia da Computa\c{c}\~ao} % área ou curso (UTFPRprogramadata)
+
+\documento{Relatório de Estágio}
+\nivel{Graduação}                %  TADS e CC = Gradução; ETEC = Graduação Técnica
+\titulacao{Bacharel}             %  TADS e CC = Bacharel; ETEC = Tecnólogo
+
+\titulo{\UTFPRdocumentodata} % não alterar
+\title{Intership Report}      % não alterar
+
+\autor{Felipe Divensi Eckl} % autor do trabalho (obs: não usar colchetes nem neste nem em outros campos)
+\cita{[DIVENSI, Felipe]} % sobrenome em maiusculas primeiro, seguindo de uma vírgula, seguido do nome do autor
+
+\palavraschave{quadricóptero, multi-rotor, VTOL} % palavras-chave do trabalho
+\keywords{quadrotor, multi-rotor, VTOL} % palavras-chave do trabalho em ingles
+
+
+\comentario{\UTFPRdocumentodata\ apresentado à disciplina de Estágio Supervisionado, do Curso \UTFPRprogramadata\ da \ABNTinstituicaodata, como requisito parcial para obtenção do título de \UTFPRtitulacaodata.}
+
+\orientador{Everton Coimbra de Araújo} % nome do orientador do trabalho
+
+% \primeiroassina{Fabiano Da Rosa\\ Supervisor do Estágio - Frimesa Cooperativa Central}
+\segundoassina{Prof. Everton Coimbra de Araújo\\ Orientador(a) do Estágio}
+\terceiroassina{Felipe Divensi Eckl\\ Estagiário(a) }
+\quartoassina{Prof. Neylor Michel\\ Responsável pela Atividade de Estágio do Curso}
+
+% a seguir, insira o nome da empresa, o período e o total de horas do seu estágio
+\textoaprovacao{
+\UTFPRdocumentodata\ curricular supervisionado, realizado na Frimesa Cooperativa Central, no período de 15 de Setembro de 2017 a 12 de Março de 2018, perfazendo aproximadamente 643 horas.
+}
+
+\local{Medianeira} % cidade
+\data{\the\year} % ano automatico
+
+% desativa hifenizacao mantendo o texto justificado.
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+\sloppy
+
+\definecolor{laranjautfpr}{cmyk}{0.0, 0.2, 1.0, 0.0}
+\usepackage{enumitem}
+\setlist{leftmargin=2cm}
+\setlist{nosep}
+
+
+%---------- Inicio do Documento ----------
+\begin{document}
+
+
+\capa % geracao automatica da capa
+\folhaderosto % geracao automatica da folha de rosto
+
+\termodeentrega
+
+% listas (opcionais, mas recomenda-se a partir de 5 elementos)
+\listadefiguras % geracao automatica da lista de figuras
+\listadetabelas % geracao automatica da lista de tabelas
+%\listadequadros % adivinhe :)
+\listadesiglas % geracao automatica da lista de siglas
+%\listadesimbolos % geracao automatica da lista de simbolos
+
+% sumario
+\sumario % geracao automatica do sumario
+
+
+%---------- Inicio do Texto ----------
+% recomenda-se a escrita de cada capitulo em um arquivo texto separado (exemplo: intro.tex, fund.tex, exper.tex, concl.tex, etc.) e a posterior inclusao dos mesmos no mestre do documento utilizando o comando \input{}, da seguinte forma:
+
+%\setcounter{page}{48}
+
+\setlength{\parskip}{0.0cm}
+\input{intro.tex}
+\input{metod.tex}
+\input{result.tex}
+\input{concl.tex}
+
+
+%---------- Referencias ----------
+\clearpage % this is need for add +1 to pageref of bibstart used in 'ficha catalografica'.
+\label{bibstart}
+\bibliography{bibliografia} % geracao automatica das referencias a partir do arquivo bibliografia.bib
+\label{bibend}
+
+
+
+% --------- Ordenacao Afabetica da Lista de siglas --------
+%\textbf{* Observa\c{c}\~oes:} a ordenacao alfabetica da lista de siglas ainda nao eh realizada de forma automatica, porem
+% eh possivel se de realizar isto manualmente. Duas formas:
+%
+% ** Primeira forma)
+%    A ordenacao eh feita com o auxilio do comando 'sort', disponivel em qualquer
+% sistema Linux e UNIX, e tambem em sistemas Windows se instalado o coreutils (http://gnuwin32.sourceforge.net/packages/coreutils.htm)
+% comandos para compilar e ordenar, supondo que seu arquivo se chame 'dissertacao.tex':
+%
+%      $ latex dissertacao
+%      $ bibtex dissertacao && latex dissertacao
+%      $ latex dissertacao
+%      $ sort dissertacao.lsg > dissertacao.lsg.tmp
+%      $ mv dissertacao.lsg.tmp dissertacao.lsg
+%      $ latex dissertacao
+%      $ dvipdf dissertacao.dvi
+%
+%
+% ** Segunda forma)
+%\textbf{Sugest\~ao:} crie outro arquivo .tex para siglas e utilize o comando \sigla{sigla}{descri\c{c}\~ao}.
+%Para incluir este arquivo no final do arquivo, utilize o comando \input{arquivo.tex}.
+%Assim, Todas as siglas serao geradas na ultima pagina. Entao, devera excluir a ultima pagina da versao final do arquivo
+% PDF do seu documento.
+
+
+%-------- Citacoes ---------
+% - Utilize o comando \citeonline{...} para citacoes com o seguinte formato: Autor et al. (2011).
+% Este tipo de formato eh utilizado no comeco do paragrafo. P.ex.: \citeonline{autor2011}
+
+% - Utilize o comando \cite{...} para citacoeses no meio ou final do paragrafo. P.ex.: \cite{autor2011}
+
+
+
+%-------- Titulos com nomes cientificos (titulo, capitulos e secoes) ----------
+% Regra para escrita de nomes cientificos:
+% Os nomes devem ser escritos em italico, 
+%a primeira letra do primeiro nome deve ser em maiusculo e o restante em minusculo (inclusive a primeira letra do segundo nome).
+% VEJA os exemplos abaixo.
+% 
+% 1) voce nao quer que a secao fique com uppercase (caixa alta) automaticamente:
+%\section[nouppercase]{\MakeUppercase{Estudo dos efeitos da radiacao ultravioleta C e TFD em celulas de} {\textit{Saccharomyces boulardii}}
+%
+% 2) por padrao os cases (maiusculas/minuscula) sao ajustados automaticamente, voce nao precisa usar makeuppercase e afins.
+% \section{Introducao} % a introducao sera posta no texto como INTRODUCAO, automaticamente, como a norma indica.
+
+
+\end{document}
