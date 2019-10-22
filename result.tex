@@ -6,53 +6,74 @@ Neste capítulo serão mostrados alguns dos projetos trabalhados e os resultados
 
 \subsection{Aplicação de Quiz Responsiva}
 
-Um dos projetos desenvolvidos foi uma aplicação Web Responsiva para um Quiz da empresa (Figura \ref{fig:quiz-1}). 
-
-% FALE SOBRE O APP. Para que serve? Quem usa? Faça isso para todos relacionados neste capítulo.
-
+Um dos projetos foi o desenvolvimento de uma aplicação Web Responsiva para um \textit{quiz} da empresa. Este projeto foi criado para facilitar a aplicação de diversos questionários com os colaboradores da empresa. Alguns dos requisitos da aplicação incluiam responsividade, uma tela de cadastro para que administradores pudessem criar questionários, cadastrar perguntas do tipo múltipla escolha e descritivas e uma tela que apresentasse os resultados do quiz por colaborador, possibilitando o download de um arquivo csv destas informações.
 
 Após receber os requerimentos do projeto, foram decididas as tecnologias que seriam utilizadas na aplicação. Foi utilizado a linguagem de programação PHP com o framework CakePHP versão 3 em conjunto com o banco de dados MySQL. Também foi decidido que a página na qual os usuários que fossem interagir seria uma única página, e seu conteúdo seria atualizado utilizando JavaScript para se comunicar com uma WebAPI.
 
-\begin{figure}[h!]
+A página inicial da aplicação em um navegador de um computador de mesa pode ser vista na Figura \ref{fig:quiz-1}. Na Figura \ref{fig:quiz-2} é apresentada a página de cadastro das questões, e na Figura \ref{fig:quiz-3} a página de resultados por colaborador, ambos em um dispositivo móvel.
+
+\begin{figure}[htbp!]
   \centering
   \includegraphics[width=0.7\textwidth]{Imagens/screenshots/quiz-1.png}
-  \caption[Aplicação de Quiz Responsiva]{Aplicação de Quiz Responsiva}
+  \caption{Página inicial da aplicação Quiz em um navegador de um computador}
   \label{fig:quiz-1}
+  \fonte{(Autoria Própria)}
+\end{figure}
+
+\begin{figure}[htbp!]
+  \centering
+  \includegraphics[width=0.45\textwidth]{Imagens/screenshots/quiz-2.png}
+  \caption{Cadastro de uma questão em um dispositivo móvel}
+  \label{fig:quiz-2}
+  \fonte{(Autoria Própria)}
+\end{figure}
+
+\begin{figure}[htbp!]
+  \centering
+  \includegraphics[width=0.45\textwidth]{Imagens/screenshots/quiz-3.png}
+  \caption{Resultados do questionário}
+  \label{fig:quiz-3}
   \fonte{(Autoria Própria)}
 \end{figure}
 
 \subsection{Portal da Intranet}
 
-O projeto de criação do Portal da Intranet responsivo foi desenvolvido para substituir as funcionalidades de um portal anterior que fazia o mesmo papel. Este que é a página inicial da intranet da empresa com links a diversos sistemas, funcionalidades e manuais que são utilizados por funcionários de diversas áreas.
+O projeto de criação do Portal da Intranet foi desenvolvido para substituir as funcionalidades de um portal anterior já existente, que era utilizado como a página inicial da intranet da empresa com links a diversos sistemas, funcionalidades e manuais que são utilizados por funcionários de diversas áreas.
 
 Também foi criada uma área administrativa para que os usuários que possuam permissões administrativas possam cadastrar os links e imagens que aparecem no portal. 
 
 Este portal foi desenvolvido utilizando o \textit{framework} CakePHP versão 3, em conjunto com o banco de dados MySQL, também foi utilizado JavaScript para fazer animações e partes interativas das páginas, como um carrossel de imagens e o carregamento das notícias na página principal.
 
-% apresente a figura
+A página inicial do portal pode ser visualizada na Figura \ref{fig:portal-1} e na Figura \ref{fig:portal-3} é apresentado um modal interativo com informações nesta tela.
 
-
-\begin{figure}[h!]
+\begin{figure}[htbp!]
   \centering
   \includegraphics[width=0.7\textwidth]{Imagens/screenshots/portal-2.png}
-  \caption[Portal da Intranet]{Portal da Intranet}
+  \caption{Tela inicial do portal}
   \label{fig:portal-1}
   \fonte{(Autoria Própria)}
 \end{figure}
 
 
+\begin{figure}[htbp!]
+  \centering
+  \includegraphics[width=0.7\textwidth]{Imagens/screenshots/portal-4.png}
+  \caption{Modal interativo na tela inicial do portal}
+  \label{fig:portal-3}
+  \fonte{(Autoria Própria)}
+\end{figure}
+
 \subsection{Portal do Representante Responsivo}
 
-O projeto de criação do Portal de Representantes responsivo, Figura \ref{fig:portalrep-1}, foi criado para centralizar todas as informações e links para que os representantes da empresa possam utilizar enquanto estiverem trabalhando remotamente. Para isto, um dos principais requisitos da página é que ela fosse responsiva, e funcionasse em qualquer dispositivo Android e iOS atualizado. 
+O projeto de criação do Portal de Representantes responsivo, foi criado para centralizar todas as informações e links para que os representantes da empresa possam utilizar enquanto estiverem trabalhando remotamente. Para isto, um dos principais requisitos da página é que ela fosse responsiva, e funcionasse em qualquer dispositivo Android e iOS atualizado. 
 
-Esta página também teve uma página administrativa criada para que as informações deste fossem cadastradas. Este portal também foi desenvolvido utilizando o framework CakePHP versão 3 e o banco de dados MySQL, utilizando Javascript para interatividade na página inicial.
+Esta página possui um setor administrativo criado para que as informações neste apresentado fossem cadastradas. Este portal foi desenvolvido utilizando o framework CakePHP versão 3 e o banco de dados MySQL, utilizando Javascript para interatividade na página inicial.
 
-% está usando muito TAMBÉN
+Na Figura \ref{fig:portalrep-1} é apresentada a página inicial do Portal do Representante em um dispositivo móvel.
 
-
-\begin{figure}[h!]
+\begin{figure}[htbp!]
   \centering
-  \includegraphics[width=0.7\textwidth]{Imagens/screenshots/portal-2.png}
+  \includegraphics[width=0.45\textwidth]{Imagens/screenshots/portal-1.png}
   \caption[Portal do Representante]{Portal do Representante}
   \label{fig:portalrep-1}
   \fonte{(Autoria Própria)}
@@ -62,11 +83,9 @@ Esta página também teve uma página administrativa criada para que as informa�
 
 \subsection{Manutenção Sistema de Chamados}
 
-Parte das tarefas do estágio foi dar manutenção ao Sistema de Gestão de Chamados do setor de Tecnologia da Informação. Este sistema (também desenvolvido e mantido por outros funcionários) é responsável pela aplicação da metodologia ITIL da empresa. Neste foram desenvolvidas novas telas, atendendo a requisitos para melhoria do mesmo.
+Parte das tarefas do estágio foi dar manutenção ao Sistema de Gestão de Chamados do setor de Tecnologia da Informação. Este sistema, que foi criado previamente por um colaborador da empresa, é responsável pela aplicação da metodologia ITIL da empresa. Neste foram desenvolvidas novas telas, atendendo a requisitos para melhoria do mesmo.
 
-% E ONDE ESTÃO AS FIGURAS DO QUE FEZ? Precisa referenciar, indicar elas no texto. E também é preciso comentar sobre elas, o que são e representam.
-
-\begin{figure}[h!]
+\begin{figure}[htbp!]
   \centering
   \includegraphics[width=1\textwidth]{Imagens/screenshots/sgc-1.png}
   \caption[Sistema de Gestão de Chamados]{Sistema de Gestão de Chamados}
